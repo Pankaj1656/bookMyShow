@@ -55,12 +55,6 @@ public class TicketService {
         }
         Show show = showOptional.get();
 
-        //Validation for the requested Seats are available or not
-//        List<String> showSeatList=ticketRequestDto.getRequestedSeats();
-//        for(int i=0;i<showSeatList.size();i++){
-//            System.out.println(showSeatList.get(i));
-//        }
-
         boolean isValid = validateShowAvailability(show,ticketRequestDto.getRequestedSeats());
 
         if(isValid==false){
